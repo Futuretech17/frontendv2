@@ -1,0 +1,49 @@
+/* src/styles/ContactPage.css */
+
+/* Main container for the contact section */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Unified contact info and form container */
+.contact-info-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 1250px;
+}
+
+/* Divider styling */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0;
+}
+
+/* Flexbox layout on larger screens */
+@media (min-width: 768px) {
+  .contact-info-form {
+    flex-direction: row;
+  }
+
+  .contact-info, .contact-form {
+    flex: 1;
+    padding: 0 20px;
+  }
+
+  .divider {
+    width: 1px;
+    height: auto;
+    margin: 0 20px;
+  }
+}

@@ -1,0 +1,106 @@
+/* Existing styles */
+.achievements {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.achievements h2 {
+  font-size: 36px;
+  color: #0046b1;
+  margin-bottom: 30px;
+}
+
+.achievements-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;  /* Ensures achievements wrap on smaller screens */
+}
+
+.achievement {
+  background-color: #ffffff;
+  padding: 30px;
+  width: 22%;  /* Adjust for desktop display */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.achievement i {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.achievement h3 {
+  font-size: 24px;
+  color: #0046b1;
+  margin-bottom: 10px;
+}
+
+.achievement p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  /* For tablets */
+  .achievements-container {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .achievement {
+    width: 45%;  /* Two items per row on tablets */
+  }
+
+  .achievements h2 {
+    font-size: 28px;  /* Slightly smaller heading size */
+  }
+
+  .achievement h3 {
+    font-size: 20px;  /* Slightly smaller title font size */
+  }
+
+  .achievement p {
+    font-size: 14px;  /* Adjust bio font size */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For smaller mobile screens */
+  .achievements {
+    padding: 20px;  /* Reduce padding for small screens */
+  }
+
+  .achievements h2 {
+    font-size: 24px;  /* Further reduce heading size */
+  }
+
+  .achievements-container {
+    flex-direction: column; /* Stack achievements vertically on small screens */
+    align-items: center;
+    gap: 20px;  /* Add gap between achievements */
+  }
+
+  .achievement {
+    width: 90%;  /* Full width for each achievement on mobile */
+  }
+
+  .achievement i {
+    font-size: 30px;  /* Adjust icon size */
+  }
+
+  .achievement h3 {
+    font-size: 18px;  /* Adjust title font size */
+  }
+
+  .achievement p {
+    font-size: 14px;  /* Adjust paragraph font size */
+  }
+}

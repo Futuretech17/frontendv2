@@ -1,0 +1,175 @@
+/* Main Product Card Layout */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Spacing between cards */
+  margin: 0 120px; /* Ensuring proper alignment */
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusts the number of columns */
+  gap: 20px;
+  width: 100%;
+}
+
+/* Product card styling */
+.product-card-main {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden;
+  width: 100%; /* Ensures the card takes up the full space of its grid cell */
+  max-width: 300px; /* Optional: Limits the card size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-main:hover {
+  transform: translateY(-5px); /* Hover effect for subtle card lift */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Image container styling */
+.product-image-container-main {
+  position: relative; /* Needed for the absolute positioning of the icon */
+  width: 100%;
+  height: 200px; /* Adjust height to fit the card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(14, 99, 163, 0.4); /* Background for the image container */
+}
+
+.product-image-main {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the container */
+  border: 4px solid #fff; /* White border around the image */
+}
+
+/* Content inside the card */
+.product-info-main {
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px; /* Ensures enough space for text and link */
+}
+
+.product-name-main {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #0e63a3;
+  margin: 15px 0 5px;
+  line-height: 1.2;
+}
+
+.product-category-main {
+  font-size: 1.2rem;
+  color: #6a6d78;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.product-description-main {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+/* WhatsApp Icon and Link Styling */
+.whatsapp-enquiry-main {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0bbf5c;
+  padding: 10px 20px; /* Increased padding for better tap area */
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Push it to the bottom */
+}
+
+.whatsapp-enquiry-main:hover {
+  background-color: #0a9e4b;
+}
+
+.whatsapp-icon-main {
+  font-size: 1.2rem; /* Adjust the icon size */
+}
+
+/* View Details Icon Styling */
+.view-details-icon-main {
+  position: absolute; /* Positioning relative to the container */
+  top: 15px; /* Adjust as needed for placement */
+  right: 15px; /* Adjust as needed for placement */
+  background-color: rgba(0, 0, 0, 0.2); /* Slight background for visibility */
+  padding: 8px; /* Provides space around the icon */
+  border-radius: 50%; /* Rounded background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.view-details-icon-main:hover {
+  background-color: rgba(0, 0, 0, 0.4); /* Darker background on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.view-details-icon-img {
+  font-size: 1.5rem; /* Adjust to the desired size */
+  color: #fff; /* White color for visibility */
+}
+
+/* View Details Link Styling */
+.view-details-link-main {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+  margin-top: auto; /* Pushes the link to the bottom */
+}
+
+.view-details-link-main:hover {
+  color: #0056b3;
+}
+
+/* Mobile Responsiveness Enhancements */
+@media (max-width: 768px) {
+  .product-list {
+      margin: 0 20px; /* Reduce side margins for smaller screens */
+  }
+
+  .product-cards {
+      gap: 15px; /* Reduce spacing between cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list {
+      margin: 0 10px; /* Minimal side margins for mobile */
+  }
+
+  .product-name-main {
+      font-size: 1.2rem;
+  }
+
+  .product-cards {
+      gap: 10px; /* Further reduce spacing */
+  }
+
+  .whatsapp-enquiry-main {
+      padding: 12px; /* Tap-friendly area */
+  }
+}

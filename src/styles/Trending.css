@@ -1,0 +1,160 @@
+/* General styling for the trending section */
+.trending-section {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.trending-section h2 {
+  font-size: 28px;
+  color: #0046b1; /* Consistent heading color */
+  margin-bottom: 20px;
+  animation: fadeInSlide 7s; /* Apply animation */
+}
+
+/* For all devices */
+.trending-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* Center the cards */
+  gap: 0.5rem;  /* Space between cards */
+  max-width: 1250px;
+  
+}
+
+/* Trending card styling */
+.trending-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Default card width */
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.trending-card img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 150px;
+}
+
+.trending-card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.trending-card p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.trending-card a {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #005199;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.trending-card:hover {
+  transform: scale(1.05);
+}
+
+.trending-card a:hover {
+  color: #005199;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .trending-products {
+    justify-content: center;
+    margin: 0 10px; /* Reduced margin for mobile view */
+    gap: 10px; /* Reduce the gap between cards in mobile */
+  }
+
+  .trending-section h2 {
+    font-size: 24px;  /* Reduce heading size */
+    margin-bottom: 15px;
+  }
+
+  .trending-card {
+    width: 100%;  /* Cards take full width */
+    padding: 0.5rem;  /* Adjust padding */
+  }
+
+  .trending-card h3 {
+    font-size: 1rem;  /* Adjust font size */
+  }
+
+  .trending-card p {
+    font-size: 0.9rem;  /* Adjust description font size */
+  }
+
+  .trending-card a {
+    font-size: 0.9rem;  /* Adjust link font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .trending-section {
+    padding: 1.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .trending-section h2 {
+    font-size: 20px; /* Further reduce heading size */
+  }
+
+  .trending-card {
+    width: 100%; /* Cards take full width */
+  }
+
+  .trending-card h3 {
+    font-size: 0.9rem; /* Adjust heading font size */
+  }
+
+  .trending-card p {
+    font-size: 0.85rem; /* Adjust paragraph font size */
+  }
+
+  .trending-card a {
+    font-size: 0.85rem; /* Adjust link font size */
+  }
+}
+
+/* Tablet responsive styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  .trending-products {
+    justify-content: space-between;  /* Distribute cards evenly */
+    margin: 0 10px; /* Remove 120px margin for tablets */
+    gap: 10px; /* Reduced gap between cards */
+  }
+
+  .trending-card {
+    width: 48%;  
+    padding: 1rem;
+  }
+
+  .trending-card h3 {
+    font-size: 1rem;  /* Adjust font size */
+  }
+
+  .trending-card p {
+    font-size: 0.9rem;  /* Adjust description font size */
+  }
+
+  .trending-card a {
+    font-size: 0.9rem;  /* Adjust link font size */
+  }
+}
+
+/* Desktop view */
+@media (min-width: 1300px) {
+  .trending-products {
+    margin: 0 auto;
+    gap: 2rem;
+  }
+}

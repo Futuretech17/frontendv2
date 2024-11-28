@@ -1,0 +1,108 @@
+/* Updated ContactForm.css */
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', Arial, sans-serif;
+  padding: 0 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 27px auto;
+}
+
+.contact-form-container h2 {
+  color: #0046b1;
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-form-container p {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns the labels and inputs to the left */
+  width: 100%;
+}
+
+.form-field label {
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: left; /* Aligns label to the left */
+  width: 100%; /* Ensures label is full width for alignment */
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-field textarea {
+  min-height: 150px;
+}
+
+.contact-form-container button {
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.contact-form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .contact-form-container h2 {
+    font-size: 24px;
+  }
+
+  .form-field label {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-size: 14px; /* Adjust input and textarea font size */
+  }
+
+  .contact-form-container button {
+    font-size: 14px; /* Adjust button font size for smaller screens */
+    padding: 12px 20px; /* Adjust padding on smaller screens */
+  }
+}

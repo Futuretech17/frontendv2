@@ -1,0 +1,26 @@
+/* src/styles/Products.css */
+.products {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--background-color);
+  }
+  
+  .products h2 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+  }
+  
+  .products p {
+    font-family: var(--font-main);
+    color: var(--secondary-color);
+  }
+  
+  /* src/styles/Products.css */
+
+  
+  @media (max-width: 768px) {
+    .products {
+      padding: 1rem;
+    }
+  }
+  

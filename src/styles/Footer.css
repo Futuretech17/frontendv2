@@ -1,0 +1,201 @@
+/* Footer Container */
+#footer {
+  background-color: #f4f8fb;
+  padding: 2rem 1rem;
+  color: #202837;
+  font-family: Poppins, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1250px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 20%;
+  min-width: 220px;
+}
+
+.footer-brandname {
+  color: #005199;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #6a6d78;
+  padding-right: 15px;
+  text-align: justify;
+}
+
+.footer-section h3 {
+  color: #005199;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+.footer-links,
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.contact-info li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links li a {
+  color: #55bc3e;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-links li a:hover {
+  color: #005199;
+  text-decoration: underline;
+}
+
+.contact-info li {
+  font-size: 0.95rem;
+  color: #6a6d78;
+}
+
+.contact-info li a {
+  color: #6a6d78;
+  text-decoration: none;
+}
+
+.contact-info li a:hover {
+  color: #005199;
+  text-decoration: underline;
+}
+
+.contact-info li svg {
+  margin-right: 8px;
+  color: #005199;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #f4f8fb;
+  color: #6a6d78;
+  font-size: 0.85rem;
+  border-top: 1px solid #e0e5ea;
+  margin-top: 2rem;
+}
+
+.footer-bottom a {
+  color: #55bc3e;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #005199;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  /* For tablets */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    text-align: center;  /* Center-align the footer sections on tablet */
+  }
+
+  .footer-description {
+    text-align: center;  /* Center the description text */
+  }
+
+  .footer-links li, .contact-info li {
+    font-size: 0.9rem;  /* Adjust font size for better readability */
+  }
+
+  .footer-brandname {
+    font-size: 1.4rem;  /* Slightly smaller font size for the brand name */
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;  /* Slightly smaller section title size */
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile devices */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;  /* Reduce gap between sections */
+  }
+
+  .footer-section {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .footer-description {
+    text-align: center;
+    font-size: 0.85rem;  /* Reduce font size for mobile */
+  }
+
+  .footer-brandname {
+    font-size: 1.4rem;  /* Slightly smaller font size */
+  }
+
+  .footer-links li, .contact-info li {
+    font-size: 0.85rem;  /* Make text more compact */
+  }
+
+  .footer-links li a, .contact-info li a {
+    font-size: 0.9rem;  /* Adjust link font size */
+  }
+
+  .footer-section h3 {
+    font-size: 1rem;  /* Adjust section title size for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For very small screens (phones) */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;  /* Even smaller gap */
+  }
+
+  .footer-description {
+    font-size: 0.8rem;  /* Further reduce font size */
+  }
+
+  .footer-links li, .contact-info li {
+    font-size: 0.8rem;  /* Make the font size more compact */
+  }
+
+  .footer-links li a, .contact-info li a {
+    font-size: 0.85rem;  /* Make the links slightly smaller */
+  }
+
+  .footer-section h3 {
+    font-size: 0.9rem;  /* Smaller section title */
+  }
+}

@@ -1,0 +1,161 @@
+/* Existing styles */
+.mission-vision {
+  background-color: #f1f8ff;
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.mission-vision h2 {
+  color: #0046b1;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mission-vision .content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.mission-vision .mission, .mission-vision .vision {
+  width: 45%;
+}
+
+.mission-vision .mission h3, .mission-vision .vision h3 {
+  font-size: 28px;
+  color: #0046b1;
+  margin-bottom: 15px;
+}
+
+.mission-vision .mission p, .mission-vision .vision p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.mission-vision .values {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.mission-vision .value {
+  text-align: center;
+  width: 30%;
+}
+
+.mission-vision .value i {
+  font-size: 50px;
+  color: #0046b1;
+  margin-bottom: 15px;
+}
+
+.mission-vision .value h4 {
+  font-size: 24px;
+  color: #0046b1;
+  margin-bottom: 10px;
+}
+
+.mission-vision .value p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .mission-vision .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mission-vision .mission,
+  .mission-vision .vision {
+    width: 100%;  /* Full width on medium screens */
+    margin-bottom: 20px;  /* Add space between mission and vision */
+  }
+
+  .mission-vision h2 {
+    font-size: 28px;  /* Slightly smaller header for tablets */
+  }
+
+  .mission-vision .mission h3,
+  .mission-vision .vision h3 {
+    font-size: 24px;  /* Smaller heading size */
+  }
+
+  .mission-vision .mission p,
+  .mission-vision .vision p {
+    font-size: 16px;  /* Adjust text size for better readability */
+    text-align: justify;
+  }
+
+  .mission-vision .values {
+    flex-direction: column;
+    gap: 20px;  /* Stack values vertically on smaller screens */
+  }
+
+  .mission-vision .value {
+    width: 100%;  /* Full width for each value */
+    margin-bottom: 20px;  /* Add space between stacked values */
+  }
+
+  .mission-vision .value i {
+    font-size: 40px;  /* Resize icons */
+  }
+
+  .mission-vision .value h4 {
+    font-size: 20px;  /* Smaller value heading */
+  }
+
+  .mission-vision .value p {
+    font-size: 14px;  /* Compact text size for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-vision {
+    padding: 20px;  /* Reduce padding on smaller screens */
+  }
+
+  .mission-vision h2 {
+    font-size: 24px;  /* Further reduce heading size */
+  }
+
+  .mission-vision .mission h3,
+  .mission-vision .vision h3 {
+    font-size: 20px;  /* Adjust subheading size */
+  }
+
+  .mission-vision .mission p,
+  .mission-vision .vision p {
+    font-size: 14px;  /* Reduce text size for smaller devices */
+    
+  }
+
+  .mission-vision .values {
+    padding: 15px;  /* Reduce padding */
+  }
+
+  .mission-vision .value {
+    width: 100%;  /* Full width for values */
+    margin-bottom: 20px;  /* Increase space between values */
+  }
+
+  .mission-vision .value i {
+    font-size: 35px;  /* Resize icons for smaller screens */
+  }
+
+  .mission-vision .value h4 {
+    font-size: 18px;  /* Adjust heading size */
+  }
+
+  .mission-vision .value p {
+    font-size: 12px;  /* Make text more compact */
+  }
+}

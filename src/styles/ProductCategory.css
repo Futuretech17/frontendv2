@@ -1,0 +1,156 @@
+/* Product Categories Section */
+.product-categories {
+    padding: 40px 10px; /* Adjusted padding for mobile view */
+    text-align: center;
+    background-color: #f4f8fb;
+    margin-top: -50px;
+}
+
+/* Heading Animation */
+.product-categories h2 {
+    font-size: 28px;
+    color: #0046b1;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Categories Container */
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto; /* Centralized layout */
+    padding: 0; /* Clean padding */
+}
+
+/* Category Card */
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    flex: 1 1 200px;
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    height: 250px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay Effect */
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(14, 99, 163, 0.4);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.category-card h3 {
+    margin: 20px 0;
+    font-size: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Enquire Button */
+.enquire-button {
+    padding: 10px 15px;
+    background-color: #7aba6f;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+    position: relative;
+    text-decoration: none;
+}
+
+.enquire-button:hover {
+    background-color: #6a9a54;
+    transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Adjust Container */
+    .product-categories {
+        padding: 20px 10px;
+        margin: 20px 0;
+    }
+
+    .categories-container {
+        flex-direction: column; /* Stack all cards vertically */
+    }
+
+    .category-card {
+        flex: 1 1 100%;
+        max-width: 100%; /* Full width for cards */
+        margin: 10px 0; /* Vertical spacing only */
+    }
+
+    /* Heading Scaling */
+    .product-categories h2 {
+        font-size: 24px;
+    }
+
+    .category-card h3 {
+        font-size: 18px;
+    }
+
+    .enquire-button {
+        padding: 8px 12px; /* Slightly smaller button */
+    }
+}
+
+@media (max-width: 1024px) {
+    .categories-container {
+        gap: 20px;
+    }
+
+    .category-card {
+        flex: 1 1 48%; /* Two cards per row */
+    }
+
+    .category-card h3 {
+        font-size: 20px;
+    }
+
+    .enquire-button {
+        padding: 10px 15px;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

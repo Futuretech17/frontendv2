@@ -1,0 +1,178 @@
+.why-choose-us {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    padding: 40px 0;
+    max-width: 1250px;
+    margin: 0 auto;
+    color: var(--secondary-color);
+    gap: 2rem;
+    align-items: center;
+}
+
+
+.why-left {
+    flex: 0 0 38%;
+    text-align: left;
+    padding-right: 20px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(40px); /* Slightly position down */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Transition properties */
+}
+
+
+.fade-in {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Move to original position */
+}
+
+
+
+.why-left h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: #0046b1;
+    margin-bottom: 1rem;
+}
+
+.why-description {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+.learn-more-button {
+    padding: 10px 20px;
+     /* Button background color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Floating effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation effects */
+    margin-top: 20px; /* Space above the button */
+    text-decoration: none;
+    background-color: #0bbf5c;
+}
+
+.learn-more-button:hover {
+    transform: translateY(-3px); /* Float effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.why-right {
+    flex: 0 0 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two vertical columns */
+    gap: 2rem; /* Space between the columns */
+}
+
+.why-points-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between each card in the column */
+}
+
+.why-points-column2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between each card in the column */
+    margin-top: -30px;
+}
+
+.why-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+}
+
+.why-point:hover {
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    background-color: rgb(244, 248, 251); /* Change background color on hover */
+}
+
+.why-point h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: var(--secondary-color);
+}
+
+.why-point p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .why-choose-us {
+        flex-direction: column; /* Stack the content vertically */
+        text-align: center; /* Center the text */
+        padding: 20px 10px; /* Adjust padding for mobile */
+        margin: 0 10px;
+    }
+
+    .why-left, .why-right {
+        width: 100%; /* Set both sides to take full width */
+        padding: 10px 0; /* Reduce padding for mobile */
+    }
+
+    .why-left {
+        text-align: center; /* Center-align text for mobile */
+        opacity: 1; /* Ensure opacity is visible on mobile */
+        transform: translateY(0); /* Reset translateY for visible positioning */
+    }
+
+    .why-left h2 {
+        font-size: 2rem; /* Adjust font size for mobile */
+    }
+
+    .why-description {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+
+    .learn-more-button {
+        padding: 12px 25px; /* Adjust button size for better touch interaction */
+        font-size: 1.1rem; /* Increase font size for readability */
+    }
+
+    .why-right {
+        flex-direction: column; /* Stack the columns vertically */
+        gap: 15px; /* Add space between columns */
+    }
+
+    .why-points-column, .why-points-column2 {
+        gap: 15px; /* Adjust gap for mobile */
+    }
+
+    .why-point {
+        flex-direction: column; /* Keep points in a column layout */
+        padding: 15px; /* Reduce padding for mobile */
+    }
+
+    .why-point h3 {
+        font-size: 1.3rem; /* Adjust heading size */
+    }
+
+    .why-point p {
+        font-size: 0.9rem; /* Smaller paragraph font */
+    }
+
+    .icon {
+        font-size: 2rem; /* Reduce icon size */
+    }
+}

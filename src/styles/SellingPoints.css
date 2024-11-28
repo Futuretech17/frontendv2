@@ -1,0 +1,122 @@
+/* Selling Points Section */
+.selling-points {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px; /* Adjust padding to match the 10px margin requirement */
+    background-color: transparent;
+    position: relative;
+    top: -100px;
+    z-index: 1;
+}
+
+/* Selling Point Card */
+.selling-point {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 200px;
+    margin: 10px;
+    max-width: 250px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease;
+}
+
+.selling-point:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.selling-point i {
+    font-size: 40px;
+    color: #7aba6f;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.selling-point:hover i {
+    animation: bounce 0.6s ease infinite;
+}
+
+.selling-point h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #063fb5;
+}
+
+.selling-point p {
+    font-size: 16px;
+    color: #000300;
+    opacity: 0.9;
+}
+
+/* Keyframes for Bounce and Fade-In Effects */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .selling-points {
+        flex-direction: column; /* Stack all cards vertically */
+        padding: 10px; /* Ensure consistent spacing around the section */
+        top: 0px;
+    }
+
+    .selling-point {
+        flex: 1 1 100%; /* Cards take full width */
+        max-width: 100%; /* Prevent any overflow */
+        margin: 10px 0; /* Top and bottom spacing between cards */
+    }
+
+    .selling-point h3 {
+        font-size: 18px; /* Reduce heading size */
+    }
+
+    .selling-point p {
+        font-size: 14px; /* Smaller font for better mobile scaling */
+    }
+
+    .selling-point i {
+        font-size: 35px; /* Adjust icon size */
+    }
+}
+
+/* Tablet View Adjustments */
+@media (max-width: 1024px) {
+    .selling-points {
+        gap: 15px; /* Adjust space between cards */
+    }
+
+    .selling-point {
+        flex: 1 1 48%; /* Two cards per row for tablets */
+    }
+
+    .selling-point i {
+        font-size: 38px; /* Moderate icon size */
+    }
+}

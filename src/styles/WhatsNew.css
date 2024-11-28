@@ -1,0 +1,187 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.whatsnew-container {
+    padding: 40px 150px;
+    background-color: #f4f8fb;
+    text-align: center;
+}
+
+/* Whats New Heading Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+.whatsnew-heading {
+    font-size: 28px;
+    color: #0046b1;
+    margin-bottom: 20px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(40px); /* Start slightly below */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Transition properties */
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    background: #0bbf5c;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    font-size: 1.25rem;
+    color: white;
+    z-index: 10;
+}
+
+.wrapper i#left {
+    left: -60px; /* Adjusted positioning */
+}
+
+.wrapper i#right {
+    right: -60px; /* Adjusted positioning */
+}
+
+.carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 4) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 340px;
+    list-style: none;
+    background: #fff;
+    border-radius: 12px;  /* Rounded corners */
+    display: flex;
+    cursor: pointer;
+    width: 98%;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);  /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth hover effect */
+}
+
+.carousel .card:hover {
+    transform: translateY(-5px);  /* Subtle lift on hover */
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);  /* Enhanced shadow on hover */
+    border: 1px solid rgba(0, 0, 0, 0.1);  /* Slightly faded border */
+}
+
+.card .img {
+    background: rgba(14, 99, 163, 0.4);
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+}
+
+.card .img img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.card h2 {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #0e63a3;
+    margin: 15px 0 5px;
+}
+
+.card span {
+    color: #6a6d78;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card .whatsapp-enquiry {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0bbf5c;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.card .whatsapp-enquiry:hover {
+    background-color: #0a9e4b;
+}
+
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .whatsnew-container {
+        padding: 5px 50px;
+        background-color: #f4f8fb;
+        text-align: center;
+    }
+
+   
+    .wrapper i {
+        max-width: 50px;        
+    }
+
+    .wrapper i#left {
+        left: -20px; /* Adjusted positioning */
+    }
+    
+    .wrapper i#right {
+        right: -20px; /* Adjusted positioning */
+    }
+
+    /* Ensuring the carousel's grid adapts on mobile */
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}

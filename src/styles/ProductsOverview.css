@@ -1,0 +1,140 @@
+/* Existing styles */
+.products-overview {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.products-overview h2 {
+  color: #0046b1;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.products-overview .section-description {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.products-overview .product-categories {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+}
+
+.products-overview .product-category {
+  width: 23%;  /* Adjusted to ensure 4 items fit well in row */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.products-overview .product-category:hover {
+  transform: scale(1.05);
+}
+
+.products-overview .product-category i {
+  font-size: 50px;
+  color: #0046b1;
+  margin-bottom: 15px;
+}
+
+.products-overview .product-category h3 {
+  font-size: 24px;
+  color: #0046b1;
+  margin-bottom: 15px;
+}
+
+.products-overview .product-category p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.products-overview .category-link {
+  display: inline-block;
+  color: #0046b1;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.products-overview .category-link:hover {
+  color: #007bff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  /* For tablets */
+  .products-overview .product-categories {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .products-overview .product-category {
+    width: 48%;  /* Two items per row on tablets */
+    margin-bottom: 20px;  /* Space between categories */
+  }
+
+  .products-overview h2 {
+    font-size: 28px;  /* Slightly smaller heading size */
+  }
+
+  .products-overview .section-description {
+    font-size: 16px;  /* Reduce font size for better readability */
+  }
+
+  .products-overview .product-category h3 {
+    font-size: 20px;  /* Reduce product name size */
+  }
+
+  .products-overview .product-category p {
+    font-size: 14px;  /* Adjust text size */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For smaller mobile screens */
+  .products-overview {
+    padding: 20px;  /* Reduce padding */
+  }
+
+  .products-overview h2 {
+    font-size: 24px;  /* Reduce heading size for small screens */
+  }
+
+  .products-overview .section-description {
+    font-size: 14px;  /* Further reduce font size for better legibility */
+  }
+
+  .products-overview .product-categories {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;  /* Stack product categories vertically */
+  }
+
+  .products-overview .product-category {
+    width: 90%;  /* Full width for each product category */
+  }
+
+  .products-overview .product-category i {
+    font-size: 40px;  /* Adjust icon size */
+  }
+
+  .products-overview .product-category h3 {
+    font-size: 18px;  /* Reduce heading size */
+  }
+
+  .products-overview .product-category p {
+    font-size: 12px;  /* Reduce paragraph text size */
+  }
+}

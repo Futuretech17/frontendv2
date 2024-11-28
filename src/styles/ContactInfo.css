@@ -1,0 +1,102 @@
+/* Updated ContactInfo.css */
+.contact-info-container {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  padding: 30px; /* Added padding here */
+}
+
+.contact-info-container h2 {
+  color: #0046b1;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center; /* Aligns icons and text properly on larger screens */
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  justify-content: flex-start; /* Aligns icon and text to the left */
+}
+
+.contact-info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: #007bff;
+  margin-right: 20px; /* Ensures enough space between icon and text */
+  flex-shrink: 0; /* Prevents icon from shrinking if text is long */
+}
+
+.contact-info-description {
+  flex-grow: 1; /* Ensures that the text area grows to fill the remaining space */
+}
+
+.contact-info-description p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6; /* Increases readability */
+  color: #333;
+}
+
+.contact-info-description p strong {
+  font-weight: bold;
+  color: #0046b1;
+}
+
+.contact-info-description ul {
+  margin: 0;
+  padding: 0 0 0 20px; /* Adds space for bullets */
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.contact-info-description ul li {
+  margin-bottom: 8px; /* Adds spacing between list items */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-info-container {
+    padding: 20px; /* Adjusts padding for smaller screens */
+    max-width: 100%;
+  }
+
+  .contact-info-container h2 {
+    font-size: 24px; /* Adjusts heading size */
+  }
+
+  .contact-info-item {
+    flex-direction: column; /* Stacks icon and text vertically on small screens */
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .contact-icon {
+    margin-bottom: 10px; /* Adds spacing between the icon and text when stacked */
+    margin-right: 0; /* Removes horizontal spacing */
+    margin-left: 0; /* Prevents left margin shift */
+  }
+
+  .contact-info-description p,
+  .contact-info-description ul {
+    font-size: 16px; /* Adjusts text size on mobile */
+    text-align: left; /* Ensures the text is aligned properly */
+  }
+
+  .contact-info-item {
+    justify-content: flex-start; /* Ensures icons and text align left */
+  }
+}

@@ -1,0 +1,51 @@
+.products-page {
+  padding: 40px 15px; /* Adjusted padding for better spacing on smaller screens */
+  background-color: #f4f8fb;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Reduced gap for smaller screens */
+}
+
+.products-container .product-card {
+  flex: 1 1 calc(33.333% - 30px); /* Default for large screens */
+  max-width: 300px;
+  min-width: 260px; /* Prevent cards from becoming too narrow */
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Optional hover effect */
+}
+
+.products-container .product-card:hover {
+  transform: scale(1.05); /* Add subtle hover effect */
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .products-container .product-card {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row */
+    max-width: 100%; /* Ensure they stretch to fill available space */
+  }
+
+  .products-page {
+    padding: 30px 10px; /* Further reduce padding on tablets */
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .products-container .product-card {
+    flex: 1 1 100%; /* Single column layout */
+    max-width: 100%; /* Fill the width */
+    padding: 10px; /* Reduce padding for better fit */
+  }
+
+  .products-page {
+    padding: 20px 10px; /* Compact padding for very small screens */
+  }
+}

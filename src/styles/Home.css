@@ -1,0 +1,15 @@
+/* src/styles/Home.css */
+
+.home {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f4f8fb;
+    color: #005199;
+  }
+  
+  @media (max-width: 768px) {
+    .home {
+      padding: 1rem;
+    }
+  }
+  

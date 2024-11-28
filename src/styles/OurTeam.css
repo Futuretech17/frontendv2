@@ -1,0 +1,113 @@
+/* Existing styles */
+.our-team {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.our-team h2 {
+  font-size: 36px;
+  color: #0046b1;
+  margin-bottom: 30px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;  /* Ensures responsiveness */
+}
+
+.team-member {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 22%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-member .avatar {
+  background-color: #007bff;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 28px;
+  line-height: 60px;
+  margin: 0 auto 15px;
+}
+
+.team-member h3 {
+  font-size: 24px;
+  color: #0046b1;
+  margin-bottom: 10px;
+}
+
+.team-member .bio {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  /* For tablets */
+  .team-members {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .team-member {
+    width: 45%;  /* Two items per row on tablets */
+  }
+
+  .our-team h2 {
+    font-size: 28px;  /* Slightly smaller heading size */
+  }
+
+  .team-member h3 {
+    font-size: 20px;  /* Slightly smaller name font size */
+  }
+
+  .team-member .bio {
+    font-size: 14px;  /* Adjust bio font size */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For smaller mobile screens */
+  .our-team {
+    padding: 20px;  /* Reduce padding for small screens */
+  }
+
+  .our-team h2 {
+    font-size: 24px;  /* Further reduce heading size */
+  }
+
+  .team-members {
+    flex-direction: column; /* Stack team members vertically on small screens */
+    align-items: center;
+    gap: 20px;  /* Stack with some gap between team members */
+  }
+
+  .team-member {
+    width: 90%;  /* Full width for each team member on mobile */
+  }
+
+  .team-member .avatar {
+    width: 50px;
+    height: 50px;  /* Adjust avatar size */
+    font-size: 24px;  /* Adjust font size for small screens */
+  }
+
+  .team-member h3 {
+    font-size: 18px;  /* Adjust name size for mobile */
+  }
+
+  .team-member .bio {
+    font-size: 12px;  /* Adjust bio font size */
+  }
+}
