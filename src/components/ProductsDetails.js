@@ -37,7 +37,7 @@ const ProductDetails = () => {
           {/* Left div for the product image */}
           <div className="product-image-container">
             <img
-              src={`https://backendv2-7kje.onrender.com/${product.image}`}
+              src={`https://backend-4qik.onrender.com/${product.image}`}
               alt={product.name}
               className="product-image"
             />

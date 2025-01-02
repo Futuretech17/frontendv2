@@ -27,7 +27,7 @@ const Carousel = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://backendv2-7kje.onrender.com/api/products/whats-new');
+        const response = await fetch('https://backend-4qik.onrender.com/api/products/whats-new');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -133,7 +133,7 @@ const Carousel = () => {
             <li key={product._id} className="card">
               <div className="img">
                 <img
-                  src={`https://backendv2-7kje.onrender.com/${product.image}`}
+                  src={`https://backend-4qik.onrender.com/${product.image}`}
                   alt={product.name}
                   draggable="false"
                 />

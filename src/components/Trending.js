@@ -8,7 +8,7 @@ const Trending = () => {
 
   useEffect(() => {
     // Fetch trending products from the backend
-    fetch('https://backendv2-7kje.onrender.com/api/products/trending')
+    fetch('https://backend-4qik.onrender.com/api/products/trending')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch trending products');
@@ -43,7 +43,7 @@ const Trending = () => {
           trendingProducts.map((product) => (
             <div key={product._id} className="trending-card">
               <img
-                src={`https://backendv2-7kje.onrender.com/${product.image}`} // Assuming your backend serves static images
+                src={`https://backend-4qik.onrender.com/${product.image}`} // Assuming your backend serves static images
                 alt={product.name}
               />
               <h3>{product.name}</h3>

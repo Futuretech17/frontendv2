@@ -8,7 +8,7 @@ const ProductCardMain = ({ product }) => {
     <div className="product-card-main">
       <div className="product-image-container-main">
         <img
-          src={`https://backendv2-7kje.onrender.com/${product.image}`}
+          src={`https://backend-4qik.onrender.com/${product.image}`}
           alt={product.name}
           className="product-image-main"
         />
