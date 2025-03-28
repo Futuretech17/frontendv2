@@ -1,13 +1,13 @@
-// src/pages/products.js
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import HeroProductImage from '../assets/images/products-page.jpg';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import ProductCard from '../components/ProductCard'; // Import the ProductCard component
-import SearchBar from '../components/SearchBar';     // Import the SearchBar component
-import Pagination from '../components/Pagination';   // Import the Pagination component
-import { fetchProducts } from '../utils/api';        // API utility to fetch products
+import ProductCard from '../components/ProductCard';
+import SearchBar from '../components/SearchBar';
+import Pagination from '../components/Pagination';
+import { fetchProducts } from '../utils/api';
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);
@@ -16,21 +16,29 @@ const ProductsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalProducts, setTotalProducts] = useState(0);
   const [error, setError] = useState(null);
+  
+  const location = useLocation(); 
+  const queryParams = new URLSearchParams(location.search);
+  const category = queryParams.get('category') || "Our Products";
 
-  const productsPerPage = 12; // Define how many products per page
+  const productsPerPage = 12; 
 
-  // Fetch products when the page changes or search query changes
+  // 🔹 Scroll to top when the page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [category]); // Runs when the category changes
+
   useEffect(() => {
     const fetchProductData = async () => {
       setLoading(true);
       setError(null);
 
       try {
-        const response = await fetchProducts(currentPage, productsPerPage, searchQuery);
+        const response = await fetchProducts(currentPage, productsPerPage, searchQuery, category);
         setProducts(response.data.products);
         setTotalProducts(response.data.total);
       } catch (err) {
-        setError(`Error fetching products: ${err.message}`); // Corrected syntax for error handling
+        setError(`Error fetching products: ${err.message}`);
         console.error(err);
       } finally {
         setLoading(false);
@@ -38,12 +46,11 @@ const ProductsPage = () => {
     };
 
     fetchProductData();
-  }, [currentPage, searchQuery]);
+  }, [currentPage, searchQuery, category]);
 
-  // Handle search input
   const handleSearch = (query) => {
     setSearchQuery(query);
-    setCurrentPage(1); // Reset to the first page when the search query changes
+    setCurrentPage(1);
   };
 
   return (
@@ -51,27 +58,20 @@ const ProductsPage = () => {
       <Navbar />
       
       <HeroSection
-        title="Our Products"
+        title={category}  // Dynamically update title based on category
         subtitle="Explore a wide range of medical and pharmaceutical supplies."
-        backgroundImage={HeroProductImage} // Pass the specific image
+        backgroundImage={HeroProductImage}
       />
 
-      {/* Search Bar */}
       <div className="search-container">
         <SearchBar onSearch={handleSearch} />
       </div>
 
-      {/* Error Message */}
       {error && <div className="error-message">{error}</div>}
-
-      {/* Loading Indicator */}
       {loading && <div className="loading-message">Loading products...</div>}
 
-      {/* Product List */}
       <div className="product-list">
-        {!loading && products.length === 0 && !error && (
-          <p>No products found.</p>
-        )}
+        {!loading && products.length === 0 && !error && <p>No products found.</p>}
         <div className="product-cards">
           {products.map(product => (
             <ProductCard key={product._id} product={product} />
@@ -79,7 +79,6 @@ const ProductsPage = () => {
         </div>
       </div>
 
-      {/* Pagination */}
       <Pagination
         currentPage={currentPage}
         totalItems={totalProducts}

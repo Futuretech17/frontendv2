@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import { useNavigate } from 'react-router-dom'; // Use useNavigate for redirection
 import '../styles/ProductCategory.css';
 import surgicalSuppliesImage from '../assets/images/surgical-supplies.jpg';
 import hospitalDisposablesImage from '../assets/images/hospital-disposables.jpg';
@@ -7,12 +7,20 @@ import pharmaProductsImage from '../assets/images/pharma-products.jpg';
 import diagnosticsImage from '../assets/images/diagnostics.jpg';
 
 const ProductCategories = () => {
+    const navigate = useNavigate(); // Initialize navigation
+
     const categories = [
-        { name: "Surgical Supplies", background: `url(${surgicalSuppliesImage})`, path: '/products/surgical-supplies' },
-        { name: "Hospital Disposables", background: `url(${hospitalDisposablesImage})`, path: '/products/hospital-disposables' },
-        { name: "Pharma Products", background: `url(${pharmaProductsImage})`, path: '/products/pharma-products' },
-        { name: "Diagnostics", background: `url(${diagnosticsImage})`, path: '/products/diagnostics' }
+        { name: "Surgical Supplies", background: `url(${surgicalSuppliesImage})`, path: 'Surgical Supplies' },
+        { name: "Hospital Disposables", background: `url(${hospitalDisposablesImage})`, path: 'Hospital Disposables' },
+        { name: "Pharma Products", background: `url(${pharmaProductsImage})`, path: 'Pharma Products' },
+        { name: "Diagnostics", background: `url(${diagnosticsImage})`, path: 'Diagnostics' }
     ];
+
+    const handleCategoryClick = (category) => {
+        const url = `/products?category=${encodeURIComponent(category)}`;
+        console.log("Navigating to:", url); // Debugging: Logs the URL to the console
+        navigate(url);
+    };
 
     return (
         <section className="product-categories">
@@ -25,7 +33,12 @@ const ProductCategories = () => {
                         style={{ backgroundImage: category.background }}
                     >
                         <h3>{category.name}</h3>
-                        <Link to= '/products' className="enquire-button">View Products</Link>
+                        <button 
+                            className="enquire-button"
+                            onClick={() => handleCategoryClick(category.path)}
+                        >
+                            View Products
+                        </button>
                     </div>
                 ))}
             </div>

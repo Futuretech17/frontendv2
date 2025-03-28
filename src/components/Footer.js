@@ -29,10 +29,10 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Product Categories</h3>
           <ul className="footer-links">
-            <li>Surgical Supplies</li>
-            <li>Hospital Disposables</li>
-            <li>Pharma Products</li>
-            <li>Diagnostics</li>
+            <li><Link to="/products?category=Surgical%20Supplies">Surgical Supplies</Link></li>
+            <li><Link to="/products?category=Hospital%20Disposables">Hospital Disposables</Link></li>
+            <li><Link to="/products?category=Pharma%20Products">Pharma Products</Link></li>
+            <li><Link to="/products?category=Diagnostics">Diagnostics</Link></li>
           </ul>
         </div>
 
