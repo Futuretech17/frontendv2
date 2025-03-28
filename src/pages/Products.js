@@ -19,14 +19,17 @@ const ProductsPage = () => {
   
   const location = useLocation(); 
   const queryParams = new URLSearchParams(location.search);
-  const category = queryParams.get('category') || "Our Products";
+  const categoryFromURL = queryParams.get('category');
+
+  // ✅ Fix: Ensure only valid category is sent, otherwise fetch all products
+  const category = categoryFromURL && categoryFromURL !== "Our Products" ? categoryFromURL : "";
 
   const productsPerPage = 12; 
 
-  // 🔹 Scroll to top when the page loads
+  // 🔹 Scroll to top when the page loads or category changes
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [category]); // Runs when the category changes
+  }, [category]); 
 
   useEffect(() => {
     const fetchProductData = async () => {
@@ -58,7 +61,7 @@ const ProductsPage = () => {
       <Navbar />
       
       <HeroSection
-        title={category}  // Dynamically update title based on category
+        title={category || "Our Products"}  // ✅ Default to "Our Products" for UI but not API request
         subtitle="Explore a wide range of medical and pharmaceutical supplies."
         backgroundImage={HeroProductImage}
       />
